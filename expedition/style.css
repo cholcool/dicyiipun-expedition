@@ -2399,25 +2399,39 @@ article.hentry .image-full{
 /* Pagination */
 /* --------------------------------------- */
 
+.pagination .nav-links {
+  text-align: center;
+  margin: 50px auto 0 auto;
+  background-color: #ccc;
+  border-radius: 50px;
+  display: table;
+}
+
 .page-numbers {
-  border: 1px solid #cccccc;
-  background-color: #ffffff;
+  /*border: 1px solid #cccccc;*/
+  background-color: transparent;
   color: #565656;
-  display: inline-block;
+  display: table-cell;
   font-size: 18px;
   height: 44px;
+  width: 44px;
   line-height: 40px;
   margin-top: 15px;
   text-align: center;
   vertical-align: middle;
-  width: 44px;
+  border-radius: 100%;
 }
 
 .page-numbers:hover,
 .page-numbers:focus,
 .page-numbers.current {
-  border: 1px solid #028484;
+  /*border: 1px solid #028484;*/
   color: #028484;
+  background-color: #fff;
+}
+
+.page-numbers.current {
+  border: 1px solid #2399dd;
 }
 
 /* Posts and Pages */

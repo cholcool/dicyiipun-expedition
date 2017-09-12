@@ -61,7 +61,14 @@ do_action( 'expedition_action_after_title' );
 
 			endwhile;
 
-			the_posts_navigation();
+			the_posts_navigation( array(
+					'prev_text'          => 'Prev',
+					'next_text'          => 'Next',
+					'in_same_term'       => true,
+					'taxonomy'           => 'category',
+					'excluded_terms'     => array(1,2,3),
+					'screen_reader_text' => 'Post navigation'
+					) );
 
 		else :
 

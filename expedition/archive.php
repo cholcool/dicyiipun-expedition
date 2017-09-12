@@ -61,7 +61,14 @@ get_header(); ?>
 					 */
 					get_template_part( 'template-parts/content', get_post_format() );
 				endwhile;
-				the_posts_navigation();
+				the_posts_pagination( array(
+					'prev_text'          => 'Prev',
+					'next_text'          => 'Next',
+					'in_same_term'       => true,
+					'taxonomy'           => 'category',
+					'excluded_terms'     => array(1,2,3),
+					'screen_reader_text' => 'Post navigation'
+					) );
 			else :
 				get_template_part( 'template-parts/content', 'none' );
 

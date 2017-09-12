@@ -36,6 +36,24 @@ do_action( 'expedition_action_after_title' );
 		endwhile; // End of the loop.
 		?>
 
+    <h3>Top 10 of <span style="color: #008cdd">today</span></h3>
+    <?php _e(tguy_sm_summary_table_gg(1)); ?>
+
+		<div class="widget widget_categories">
+			<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'expedition' ); ?></h2>
+			<ul>
+				<?php
+					wp_list_categories( array(
+						'orderby'    => 'count',
+						'order'      => 'DESC',
+						'show_count' => 1,
+						'title_li'   => '',
+						'number'     => 10,
+					) );
+				?>
+			</ul>
+		</div><!-- .widget -->
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 	<?php
