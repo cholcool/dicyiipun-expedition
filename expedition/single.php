@@ -36,11 +36,13 @@ do_action( 'expedition_action_after_title' );
 		endwhile; // End of the loop.
 		?>
 
-    <h3>Top 10 of <span style="color: #008cdd">today</span></h3>
-    <?php _e(tguy_sm_summary_table_gg(1)); ?>
+		<div class="widget widget_categories">
+	    <h2 class="widget-title">คําศัพท์ที่ค้นหามากที่สุดประจำวันของเว็บไซต์ DICYIIPUN</h2>
+	    <?php _e(tguy_sm_summary_table_gg(1)); ?>
+	  </div>
 
 		<div class="widget widget_categories">
-			<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'expedition' ); ?></h2>
+			<h2 class="widget-title"><?php esc_html_e( 'หมวดหมู่ที่มีคำศัพท์มากที่สุด', 'expedition' ); ?></h2>
 			<ul>
 				<?php
 					wp_list_categories( array(

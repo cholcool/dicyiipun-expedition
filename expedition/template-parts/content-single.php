@@ -15,7 +15,7 @@
 	<tr>
 	<th>Kanji</th>
 	<th>Hiragana</th>
-	<th>Romanji</th>
+	<th>Romaji</th>
 	<th>Thai</th>
 	</tr> 
 	</tbody>
