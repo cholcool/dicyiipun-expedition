@@ -16,7 +16,12 @@ get_header(); ?>
 		if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h3 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'expedition' ), '<span>' . get_search_query() . '</span>' ); ?></h3>
+				<h3 class="page-title">
+					<?php printf( esc_html__( 'คำศัพท์ที่ค้นหา : %s', 'expedition' ), '<span>' . get_search_query() . '</span>' ); ?>
+				</h3>
+				<div class="search-count">
+					ผลการค้นหาทั้งหมด :　<?php echo $wp_query->found_posts; ?> รายการ
+				</div>
 				<div class="csv-search">
 				<table>
 				<tbody>
