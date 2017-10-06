@@ -317,8 +317,7 @@ function expedition_header() {
                                     <div class="row">
                                         <div class="">
                                             <div class="search-section">
-                                                <form role="search" method="get" id="searchform"
-                                                    class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                                                <form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                                                     <div class="search-input-holder">
                                                         <label class="screen-reader-text" for="s"><?php __( 'คำศัพท์ที่ค้นหา :', 'expedition' ); ?></label>
                                                         <input class="search-field" type="text" placeholder="ค้นหาคําศัพท์หรือคำแปลภาษาญี่ปุ่น⇔ภาษาไทยภายในเว็บไซต์ DICYIIPUN.COM" value="<?php echo get_search_query(); ?>" name="s" id="s" />
@@ -337,7 +336,7 @@ function expedition_header() {
                                 <div class="container">
                                     <div class="row">
                                         <div class="search-section send-new-word-form">
-                                            <a class="button" href="<?php echo esc_url( home_url( '/sendnewwordform/' ) ); ?>"><button class="column-xsd-12">Send New Word</button></a>
+                                            <a class="button" href="<?php echo esc_url( home_url( '/add-new-word/' ) ); ?>"><button class="column-xsd-12">Send New Word</button></a>
                                         </div>
                                     </div>
                                 </div>
