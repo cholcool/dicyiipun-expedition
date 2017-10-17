@@ -322,4 +322,3 @@ function tguy_sm_summary_table_gg($days, $do_include_successes = true) {
     }
 }
 add_filter('search_rangink','tguy_sm_summary_table_gg');
-

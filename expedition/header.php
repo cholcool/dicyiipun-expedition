@@ -36,6 +36,16 @@ do_action( 'expedition_action_before_head' );?>
 	 */
 	do_action( 'expedition_action_after_wp_head' );
 	?>
+	<script type="text/javascript">
+		function checkLeter() {
+			var elem = document.getElementById('s').value;
+			int index = elem.indexOf('e');
+			if (a == 1) {
+				alert("กรุณาใส่สระ แอ ให้ถูกต้อง เพื่อให้ได้ผลการค้นหาตามที่ต้องการ");
+				document.getElementById('s').value = "";
+			}
+		};
+	</script>
 </head>
 
 <body <?php body_class(); ?>>

@@ -3239,8 +3239,18 @@ h2.block-post-title{
 
 .site-main .page-header {
 	border-bottom: 2px solid #4D545F;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
+  	padding-bottom: 10px;
+  	margin-bottom: 10px;
+}
+
+.page-header .page-title { 
+	margin: 0; 
+}
+
+.page-header .search-count {
+	margin-bottom: 10px;
+	color: #808080;
+    -webkit-transition: all 220ms ease-out;
 }
 
 .mainlogo-image-one {
@@ -3303,7 +3313,7 @@ h2.block-post-title{
   line-height: 22px;
   padding-left: 50px;
   padding-right: 15px;
-  text-transform: uppercase;
+  text-transform: none;
   vertical-align: top;
   width: 65%; /*fallback*/
   width: calc(100% - 150px);
@@ -3908,3 +3918,4 @@ h2.block-post-title{
   width: 30%;
   margin: 0 auto;
 }
+.black-ribbon { width: 80px; }

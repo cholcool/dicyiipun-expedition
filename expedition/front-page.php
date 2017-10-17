@@ -15,3 +15,4 @@ get_header();
 do_action( 'expedition_action_front_page' );
 
 get_footer();
+?>

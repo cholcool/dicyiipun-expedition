@@ -84,3 +84,4 @@ do_action( 'expedition_action_after_title' );
 </div>
 <?php
 get_footer();
+?>

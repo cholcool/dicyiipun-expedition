@@ -78,3 +78,4 @@ do_action( 'expedition_action_after_title' );
 
 <?php
 get_footer();
+?>
