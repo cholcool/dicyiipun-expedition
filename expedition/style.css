@@ -1736,6 +1736,7 @@ entry-footer:last-child {
   content: "\f274";
 }
 
+.cat-links-view a,
 .posted-on a, 
 .cat-links a, 
 .tags-links a, 

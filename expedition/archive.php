@@ -6,8 +6,8 @@
  *
  * @package expedition
  */
-
 get_header(); ?>
+
 	<div class="wrapper page-inner-title">
 		<div class="container">
 		    <div class="row">
@@ -22,16 +22,10 @@ get_header(); ?>
 		    </div>
 		</div>
 	</div>
-	<?php 
-	/**
-	 * expedition_action_after_title hook
-	 * @since Expedition 0.0.2
-	 *
-	 * @hooked null
-	 */
-	do_action( 'expedition_action_after_title' );
-	?>
-	<div id="content" class="site-content">
+
+	<?php  do_action( 'expedition_action_after_title' ); ?>
+
+	<div id="content" class="site-content archive-page">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
 				<header class="page-header">
@@ -48,36 +42,31 @@ get_header(); ?>
 				</table>
 				</div>
 				</header>
-			<?php
-			if ( have_posts() ) : ?>
-				<?php
-				/* Start the Loop */
-				while ( have_posts() ) : the_post();
 
-					/*
-					 * Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'template-parts/content', get_post_format() );
-				endwhile;
+			<?php if ( have_posts() ) : ?>
+
+				<?php while ( have_posts() ) : ?>  <?php the_post(); ?>
+
+					<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+
+				<?php endwhile; ?>
+
+				<?php wp_reset_postdata(); ?>
+
+				<?php
 				the_posts_pagination( array(
 					'prev_text'          => 'Prev',
-					'next_text'          => 'Next',
-					'in_same_term'       => true,
-					'taxonomy'           => 'category',
-					'excluded_terms'     => array(1,2,3),
-					'screen_reader_text' => 'Post navigation'
+					'next_text'          => 'Next'
 					) );
-			else :
-				get_template_part( 'template-parts/content', 'none' );
+					?>
 
-			endif; ?>
+			<?php else : get_template_part( 'template-parts/content', 'none' ); endif; ?>
+
+
 			</main><!-- #main -->
 		</div><!-- #primary -->
+
 		<?php get_sidebar(); ?>
 
 	</div>
-<?php
-get_footer();
-?>
+<?php get_footer(); ?>

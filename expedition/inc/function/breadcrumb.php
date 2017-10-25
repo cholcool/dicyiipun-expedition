@@ -17,7 +17,7 @@ if( ! function_exists( 'expedition_simple_breadcrumb' ) ) :
 
         /* === OPTIONS === */
         $text['home']     = get_bloginfo( 'name' ); // text for the 'Home' link
-        $text['category'] = __( 'Archive for <em>%s</em>', 'expedition' ); // text for a category page
+        $text['category'] = __( 'Category for <em>%s</em>', 'expedition' ); // text for a category page
         $text['tax']      = __( 'Archive for <em>%s</em>', 'expedition' ); // text for a taxonomy page
         $text['search']   = __( 'Search results for: <em>%s</em>', 'expedition' ); // text for a search results page
         $text['tag']      = __( 'Posts tagged <em>%s</em>', 'expedition' ); // text for a tag page
