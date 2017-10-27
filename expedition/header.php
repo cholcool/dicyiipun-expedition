@@ -38,12 +38,12 @@ do_action( 'expedition_action_before_head' );?>
 	?>
 	<script type="text/javascript">
 		function checkLeter() {
-			var elem = document.getElementById('s').value;
-			int index = elem.indexOf('e');
-			if (a == 1) {
-				alert("กรุณาใส่สระ แอ ให้ถูกต้อง เพื่อให้ได้ผลการค้นหาตามที่ต้องการ");
-				document.getElementById('s').value = "";
-			}
+	    var x = document.getElementById("s");
+	    x.value = x.value.replace(/เเ/g, "แ");
+		};
+		function checkLeter1() {
+	    var x = document.getElementById("ss");
+	    x.value = x.value.replace(/เเ/g, "แ");
 		};
 	</script>
 </head>

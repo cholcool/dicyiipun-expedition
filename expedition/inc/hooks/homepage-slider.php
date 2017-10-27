@@ -209,7 +209,7 @@ if ( ! function_exists( 'expedition_featured_home_slider' ) ) :
                             <form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                                 <div class="search-input-holder">
                                     <label class="screen-reader-text" for="s"><?php __( 'คำศัพท์ที่ค้นหา :', 'expedition' ); ?></label>
-                                    <input class="search-field" type="text" placeholder="ค้นหาคําศัพท์หรือคำแปลภาษาญี่ปุ่น⇔ภาษาไทยภายในเว็บไซต์ DICYIIPUN.COM" value="<?php if (!empty(the_search_query())) {header("Location: $_SERVER[PHP_SELF]");} ?>" name="s" id="s" />
+                                    <input class="search-field" type="text" placeholder="ค้นหาคําศัพท์หรือคำแปลภาษาญี่ปุ่น⇔ภาษาไทยภายในเว็บไซต์ DICYIIPUN.COM" value="<?php if (!empty(the_search_query())) {header("Location: $_SERVER[PHP_SELF]");} ?>" name="s" id="ss" onkeyup="checkLeter1();" />
                                     <input class="search-submit" type="submit" name="search_by" value="all" hidden>
                                     <button class="catselect" type="submit" name="search_by" value="post"><?php echo esc_attr__( 'Search', 'expedition' ); ?></button>
                                 </div>
