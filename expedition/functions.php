@@ -323,3 +323,34 @@ function tguy_sm_summary_table_gg($days, $do_include_successes = true) {
 }
 add_filter('search_rangink','tguy_sm_summary_table_gg');
 
+
+$bmIgnorePosts = array();
+/**
+ * add a post id to the ignore list for future query_posts
+ */
+function bm_ignorePost ($id) {
+	if (!is_page()) {
+		global $bmIgnorePosts;
+		$bmIgnorePosts[] = $id;
+	}
+}
+ 
+/**
+ * reset the ignore list
+ */
+function bm_ignorePostReset () {
+	global $bmIgnorePosts;
+	$bmIgnorePosts = array();
+}
+ 
+/**
+ * remove the posts from query_posts
+ */
+function bm_postStrip ($where) {
+	global $bmIgnorePosts, $wpdb;
+	if (count($bmIgnorePosts) > 0) {
+		$where .= ' AND ' . $wpdb->posts . '.ID NOT IN(' . implode (',', $bmIgnorePosts) . ') ';
+	}
+	return $where;
+}
+add_filter ('posts_where', 'bm_postStrip');

@@ -3240,8 +3240,9 @@ h2.block-post-title{
 
 .site-main .page-header {
 	border-bottom: 2px solid #4D545F;
-  	padding-bottom: 10px;
-  	margin-bottom: 10px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .page-header .page-title { 
@@ -3920,3 +3921,17 @@ h2.block-post-title{
   margin: 0 auto;
 }
 .black-ribbon { width: 80px; }
+.icons_box {
+  position: absolute;
+  z-index: 99999;
+  top: 33.1px;
+  right: 15.1px;
+}
+.icons_box .facebook_icon img {
+  max-width: 50px;
+}
+@media(max-width: 768px) {
+  .icons_box { top: 13px; }
+}
+
+.hidden { display: none; }

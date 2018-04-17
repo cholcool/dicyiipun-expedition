@@ -41,7 +41,7 @@ if ( ! function_exists( 'expedition_footer' ) ) :
                  <div class="site-info">
                     <?php
                     if(isset($expedition_customizer_all_values['expedition-copyright-text'])){
-                        echo wp_kses_post( $expedition_customizer_all_values['expedition-copyright-text'] );
+                        echo "Copyright © " . date('Y') . " " . wp_kses_post( $expedition_customizer_all_values['expedition-copyright-text'] );
                     }
                     ?>
                 </div><!-- .site-info -->

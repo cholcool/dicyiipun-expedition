@@ -19,3 +19,11 @@
 		} );
 	} );
 } )( jQuery );
+
+function checkLeter() {
+	var elem = document.getElementById('s').value;
+	if (elem === "เเ") {
+		alert("กรุณาใส่สระ แอ ให้ถูกต้อง เพื่อให้ได้ผลการค้นหาตามที่ต้องการ");
+		document.getElementById('s').value = "";
+	}
+};

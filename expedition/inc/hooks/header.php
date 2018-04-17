@@ -194,7 +194,7 @@ function expedition_top_header_section() {
         <div class="container">
             <div class="top-header-inner">
                 <div class="row">
-                    <div class="column-md-7 column-sd-12 column-xsd-12 rtl-fright">
+                    <div class="column-sd-12 column-xsd-12 rtl-fright">
                          <?php if ( is_active_sidebar( 'sidebar-header-top' ) ) { ?>
                             <?php dynamic_sidebar( 'sidebar-header-top' ); ?>
                         <?php } ?>                          
@@ -320,7 +320,8 @@ function expedition_header() {
                                                 <form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                                                     <div class="search-input-holder">
                                                         <label class="screen-reader-text" for="s"><?php __( 'คำศัพท์ที่ค้นหา :', 'expedition' ); ?></label>
-                                                        <input class="search-field" type="text" placeholder="ค้นหาคําศัพท์หรือคำแปลภาษาญี่ปุ่น⇔ภาษาไทยภายในเว็บไซต์ DICYIIPUN.COM" value="<?php echo get_search_query(); ?>" name="s" id="s" onkeyup="checkLeter();" />
+                                                        <input class="search-field" type="text" placeholder="ค้นหาคําศัพท์หรือคำแปลภาษาญี่ปุ่น⇔ภาษาไทยภายในเว็บไซต์ DICYIIPUN.COM" 
+                                                            value="<?php echo get_search_query(); ?>" name="s" id="s" onkeyup="checkLeter();" />
                                                         <input class="search-submit" type="submit" name="search_by" value="all" hidden>
                                                         <button class="catselect" type="submit" name="search_by" value="post"><?php echo esc_attr__( 'Search', 'expedition' ); ?></button>
                                                     </div>
