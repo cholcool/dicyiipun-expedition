@@ -61,14 +61,15 @@ get_header(); ?>
 
 		endif; ?>
 
-<header class="page-header hidden">
+<header class="page-header ">
 <h3 class="page-title"><?php printf( esc_html__( 'Words related to : %s', 'expedition' ), '<span>"' . get_search_query() . '"</span>' ); ?></h3>
 <div class="csv-search">
 <?php
-$related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 10, 'post__not_in' => array($post->ID) ) );
+$related = get_posts( array( "s"=>get_search_query() ) );
+
 if( $related ) foreach( $related as $post ) {
 	setup_postdata($post);  
-	the_content('Read the rest of this entry &raquo;');  
+	get_template_part( 'template-parts/content', 'search' ); 
 }
 wp_reset_postdata(); 
 ?>
