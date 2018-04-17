@@ -59,22 +59,25 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', 'none' );
 
-		endif; ?>
+		endif; 
+		?>
 
 <header class="page-header ">
-<h3 class="page-title"><?php printf( esc_html__( 'Words related to : %s', 'expedition' ), '<span>"' . get_search_query() . '"</span>' ); ?></h3>
+<h3 class="page-title"><?php printf( esc_html__( 'ค้นหาคำศัพท์ในหมวด : %s', 'expedition' ), '<span>' . get_the_category_list(' , ') . '</span>' ); ?></h3>
+</header>
 <div class="csv-search">
 <?php
-$related = get_posts( array( "s"=>get_search_query() ) );
+
+$related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 10, 'post__not_in' => array($post->ID) ) );
 
 if( $related ) foreach( $related as $post ) {
 	setup_postdata($post);  
-	get_template_part( 'template-parts/content', 'search' ); 
+	get_template_part( 'template-parts/content', 'search' );
 }
 wp_reset_postdata(); 
 ?>
 </div>
-</header>
+
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
